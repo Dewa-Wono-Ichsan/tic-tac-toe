@@ -11,22 +11,21 @@ function player(name,symbol){
     return{name, symbol}
 }
 
-function decide(){
-
-    let chance = Math.random()
-
-    if(chance <= 0.5){
-        return board().symbolX
-    } else if(chance > 0.5){
-        return board().symbolO
-    }
-}
 
 function match(){
-
+    function decide(){
+    
+        let chance = Math.random()
+    
+        if(chance <= 0.5){
+            return board().symbolX
+        } else if(chance > 0.5){
+            return board().symbolO
+        }
+    }
+    
     let player1 = player('Dewa', decide())
     let player2
-    let start = board().field
 
     if(player1.symbol === board().symbolX){
 
@@ -38,5 +37,14 @@ function match(){
 
     }
 
-    return {player1, player2, start}
+    return {player1, player2}
 }
+
+const input = (function(){
+    const start = board().field
+    const input1 = () => start.push(match().player1.symbol)
+    const input2 = () => start.push(match().player2.symbol)
+
+    return{start, input1, input2}
+})()
+
