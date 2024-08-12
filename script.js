@@ -48,3 +48,24 @@ const input = (function(){
     return{start, input1, input2}
 })()
 
+
+function decide(){
+    let chance = Math.random()
+    if(chance <= 0.5){
+        return 'player1'
+    } else if(chance > 0.5){
+        return 'player2'
+    }
+}
+
+function turn(player){
+    if(player === 'player1'){
+        input.input1()
+        return input.start
+    }else if(player === 'player2'){
+        input.input2()
+        return input.start
+    }
+}
+
+turn(decide())
