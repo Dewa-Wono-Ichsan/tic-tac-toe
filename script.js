@@ -1,6 +1,10 @@
 function board(){
 
     let field = []
+    for (let index = 0; index < 9; index++) {
+        field.push('')
+        
+    }
     let symbolO = 'O'
     let symbolX = 'X'
     return{field, symbolO, symbolX}
@@ -67,5 +71,3 @@ function turn(player){
         return input.start
     }
 }
-
-turn(decide())
