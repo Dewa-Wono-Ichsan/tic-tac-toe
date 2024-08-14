@@ -46,8 +46,8 @@ function match(){
 
 const input = (function(){
     const start = board().field
-    const input1 = () => start.push(match().player1.symbol)
-    const input2 = () => start.push(match().player2.symbol)
+    const input1 = () => start.splice(parseInt(prompt(`enter your position ${match().player1.name}`)),1,match().player1.symbol)
+    const input2 = () => start.splice(parseInt(prompt(`enter your position ${match().player2.name}`)),1,match().player2.symbol)
 
     return{start, input1, input2}
 })()
