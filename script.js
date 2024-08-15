@@ -50,7 +50,7 @@ const input = (function(){
     const input1 = () => start.splice(parseInt(prompt(`enter your position ${player1.name}, your symbol is ${player1.symbol}`)), 1, player1.symbol)
     const input2 = () => start.splice(parseInt(prompt(`enter your position ${player2.name}, your symbol is ${player2.symbol}`)), 1, player2.symbol)
 
-    return{start, input1, input2}
+    return{start, player1, player2, input1, input2}
 })()
 
 
@@ -70,12 +70,21 @@ function turn(player){
     if(player === 'player1'){
             
         input.input1()
-        input.input2()
+
+        for (let index = 0; index < 4; index++) {
+            
+            input.input2()
+            input.input1()
+        }
         return board
     }else if(player === 'player2'){
             
         input.input2()
-        input.input1()
+        for (let index = 0; index < 4; index++) {
+            
+            input.input1()
+            input.input2()            
+        }
         return board
     }
 }
