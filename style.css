@@ -1,0 +1,5 @@
+.container-board{
+    height: max(300px, 30dvh);
+    width: max(300px, 30dvw);
+    border: 1px solid black;
+}
