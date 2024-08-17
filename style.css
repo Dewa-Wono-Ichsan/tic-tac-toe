@@ -2,4 +2,11 @@
     height: max(300px, 30dvh);
     width: max(300px, 30dvw);
     border: 1px solid black;
+    display: grid;
+    grid-template: repeat(3, 1fr)/repeat(3, 1fr);
+}
+
+
+.container-symbol{
+    border: 1px solid black;
 }
