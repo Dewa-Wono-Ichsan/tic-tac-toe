@@ -89,4 +89,43 @@ function turn(player){
     }
 }
 
-console.table(turn(decide()))
+// console.table(turn(decide()))
+
+const boardGame = document.querySelector('.container-board')
+boardGame.addEventListener('click', inputSymbolPlayer)
+
+function inputSymbolPlayer(event){
+    
+    switch (event.target.id) {
+        case 'box-1':
+            console.log('1')
+            break;
+        case 'box-2':
+            console.log('2')
+            break;
+        case 'box-3':
+            console.log('3')
+            break;
+        case 'box-4':
+            console.log('4')
+            break;
+        case 'box-5':
+            console.log('5')
+            break;
+        case 'box-6':
+            console.log('6')
+            break;
+        case 'box-7':
+            console.log('7')
+            break;
+        case 'box-8':
+            console.log('8')
+            break;
+        case 'box-9':
+            console.log('9')
+            break;
+        default:
+            console.log('not set')
+            break;
+    }
+}
