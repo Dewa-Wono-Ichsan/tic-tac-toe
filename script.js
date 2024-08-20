@@ -47,27 +47,35 @@ function match(){
 const input = (function(){
     const start = board().field
     const {player1, player2} = match()
-    const input1 = () => start.splice(parseInt(prompt(`enter your position ${player1.name}, your symbol is ${player1.symbol}`)), 1, player1.symbol)
-    const input2 = () => start.splice(parseInt(prompt(`enter your position ${player2.name}, your symbol is ${player2.symbol}`)), 1, player2.symbol)
+    const input1 = () => {
+        let num = parseInt(prompt(`Enter your choice ${player1.name} for symbol ${player1.symbol}`))
+        start.splice(num, 1, player1.symbol)
+    }
+    const input2 = () => {
+        let num = parseInt(prompt(`Enter your choice ${player2.name} for symbol ${player2.symbol}`))
+        start.splice(num, 1, player2.symbol)
+    }
 
     return{start, player1, player2, input1, input2}
 })()
 
+function turn(){
 
-function decide(){
+    function decide(){
 
-    let chance = Math.random()
-    if(chance <= 0.5){
-        return 'player1'
-    } else if(chance > 0.5){
-        return 'player2'
+        let chance = Math.random()
+        if(chance <= 0.5){
+            return 'player1'
+        } else if(chance > 0.5){
+            return 'player2'
+        }
     }
-}
 
-function turn(player){
+    let play = decide()
+
     const board = input.start
 
-    if(player === 'player1'){
+    if(play === 'player1'){
             
         input.input1()
 
@@ -77,7 +85,7 @@ function turn(player){
             input.input1()
         }
         return board
-    }else if(player === 'player2'){
+    }else if(play === 'player2'){
             
         input.input2()
         for (let index = 0; index < 4; index++) {
@@ -88,8 +96,6 @@ function turn(player){
         return board
     }
 }
-
-// console.table(turn(decide()))
 
 const boardGame = document.querySelector('.container-board')
 boardGame.addEventListener('click', inputSymbolPlayer)
