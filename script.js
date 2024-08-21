@@ -104,31 +104,31 @@ function inputSymbolPlayer(event){
     
     switch (event.target.id) {
         case 'box-1':
-            console.log('1')
+            input.start.splice(0, 1, input.player1.symbol)
             break;
         case 'box-2':
-            console.log('2')
+            input.start.splice(1, 1, input.player1.symbol)
             break;
         case 'box-3':
-            console.log('3')
+            input.start.splice(2, 1, input.player1.symbol)
             break;
         case 'box-4':
-            console.log('4')
+            input.start.splice(3, 1, input.player1.symbol)
             break;
         case 'box-5':
-            console.log('5')
+            input.start.splice(4, 1, input.player1.symbol)
             break;
         case 'box-6':
-            console.log('6')
+            input.start.splice(5, 1, input.player1.symbol)
             break;
         case 'box-7':
-            console.log('7')
+            input.start.splice(6, 1, input.player1.symbol)
             break;
         case 'box-8':
-            console.log('8')
+            input.start.splice(7, 1, input.player1.symbol)
             break;
         case 'box-9':
-            console.log('9')
+            input.start.splice(8, 1, input.player1.symbol)
             break;
         default:
             console.log('not set')
