@@ -97,8 +97,31 @@ function turn(){
     }
 }
 
-const boardGame = document.querySelector('.container-board')
-boardGame.addEventListener('click', inputSymbolPlayer)
+const playerInput = (function(){
+     const start = document.querySelector('.start')
+     const boardGame = document.querySelector('.container-board')
+     
+     return{start, boardGame}
+})()
+
+function start(){
+
+    function startInt(){
+
+        playerInput.start.addEventListener('click', play)
+
+    }
+
+    function play(){
+
+        playerInput.boardGame.addEventListener('click', inputSymbolPlayer)
+    }
+
+    return startInt()
+
+}
+
+start()
 
 function inputSymbolPlayer(event){
     
