@@ -59,44 +59,6 @@ const input = (function(){
     return{start, player1, player2, input1, input2}
 })()
 
-function turn(){
-
-    function decide(){
-
-        let chance = Math.random()
-        if(chance <= 0.5){
-            return 'player1'
-        } else if(chance > 0.5){
-            return 'player2'
-        }
-    }
-
-    let play = decide()
-
-    const board = input.start
-
-    if(play === 'player1'){
-            
-        input.input1()
-
-        for (let index = 0; index < 4; index++) {
-            
-            input.input2()
-            input.input1()
-        }
-        return board
-    }else if(play === 'player2'){
-            
-        input.input2()
-        for (let index = 0; index < 4; index++) {
-            
-            input.input1()
-            input.input2()            
-        }
-        return board
-    }
-}
-
 const playerInput = (function(){
      const start = document.querySelector('.start')
      const boardGame = document.querySelector('.container-board')
