@@ -47,14 +47,6 @@ function match(){
 const input = (function(){
     const start = board().field
     const {player1, player2} = match()
-    const input1 = () => {
-        let num = parseInt(prompt(`Enter your choice ${player1.name} for symbol ${player1.symbol}`))
-        start.splice(num, 1, player1.symbol)
-    }
-    const input2 = () => {
-        let num = parseInt(prompt(`Enter your choice ${player2.name} for symbol ${player2.symbol}`))
-        start.splice(num, 1, player2.symbol)
-    }
     function first(){
         let chance = Math.random()
         if(chance <= 0.5){
@@ -65,7 +57,7 @@ const input = (function(){
     }
     const turn = first()
 
-    return{start, player1, player2, input1, input2, turn}
+    return{start, player1, player2, turn}
 })()
 
 const playerInput = (function(){
