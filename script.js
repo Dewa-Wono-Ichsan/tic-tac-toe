@@ -96,7 +96,7 @@ start()
 
 function inputSymbolPlayer(event){
 
-    if(input.first() === input.player1){
+    if(input.turn === 'player1'){
 
         switch (event.target.id){
             case 'box-1':
@@ -131,7 +131,7 @@ function inputSymbolPlayer(event){
                 break;
         }
 
-    }else if(input.first() === input.player2){
+    }else if(input.turn === 'player2'){
 
         switch (event.target.id){
             case 'box-1':
