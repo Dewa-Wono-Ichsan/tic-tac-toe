@@ -55,8 +55,17 @@ const input = (function(){
         let num = parseInt(prompt(`Enter your choice ${player2.name} for symbol ${player2.symbol}`))
         start.splice(num, 1, player2.symbol)
     }
+    function first(){
+        let chance = Math.random()
+        if(chance <= 0.5){
+            return 'player1'
+        } else if(chance > 0.5){
+            return 'player2'
+        }
+    }
+    const turn = first()
 
-    return{start, player1, player2, input1, input2}
+    return{start, player1, player2, input1, input2, turn}
 })()
 
 const playerInput = (function(){
@@ -86,37 +95,75 @@ function start(){
 start()
 
 function inputSymbolPlayer(event){
-    
-    switch (event.target.id) {
-        case 'box-1':
-            input.start.splice(0, 1, input.player1.symbol)
-            break;
-        case 'box-2':
-            input.start.splice(1, 1, input.player1.symbol)
-            break;
-        case 'box-3':
-            input.start.splice(2, 1, input.player1.symbol)
-            break;
-        case 'box-4':
-            input.start.splice(3, 1, input.player1.symbol)
-            break;
-        case 'box-5':
-            input.start.splice(4, 1, input.player1.symbol)
-            break;
-        case 'box-6':
-            input.start.splice(5, 1, input.player1.symbol)
-            break;
-        case 'box-7':
-            input.start.splice(6, 1, input.player1.symbol)
-            break;
-        case 'box-8':
-            input.start.splice(7, 1, input.player1.symbol)
-            break;
-        case 'box-9':
-            input.start.splice(8, 1, input.player1.symbol)
-            break;
-        default:
-            console.log('not set')
-            break;
+
+    if(input.first() === input.player1){
+
+        switch (event.target.id){
+            case 'box-1':
+                input.start.splice(0, 1, input.player1.symbol)
+                break;
+            case 'box-2':
+                input.start.splice(1, 1, input.player1.symbol)
+                break;
+            case 'box-3':
+                input.start.splice(2, 1, input.player1.symbol)
+                break;
+            case 'box-4':
+                input.start.splice(3, 1, input.player1.symbol)
+                break;
+            case 'box-5':
+                input.start.splice(4, 1, input.player1.symbol)
+                break;
+            case 'box-6':
+                input.start.splice(5, 1, input.player1.symbol)
+                break;
+            case 'box-7':
+                input.start.splice(6, 1, input.player1.symbol)
+                break;
+            case 'box-8':
+                input.start.splice(7, 1, input.player1.symbol)
+                break;
+            case 'box-9':
+                input.start.splice(8, 1, input.player1.symbol)
+                break;
+            default:
+                console.log('not set')
+                break;
+        }
+
+    }else if(input.first() === input.player2){
+
+        switch (event.target.id){
+            case 'box-1':
+                input.start.splice(0, 1, input.player2.symbol)
+                break;
+            case 'box-2':
+                input.start.splice(1, 1, input.player2.symbol)
+                break;
+            case 'box-3':
+                input.start.splice(2, 1, input.player2.symbol)
+                break;
+            case 'box-4':
+                input.start.splice(3, 1, input.player2.symbol)
+                break;
+            case 'box-5':
+                input.start.splice(4, 1, input.player2.symbol)
+                break;
+            case 'box-6':
+                input.start.splice(5, 1, input.player2.symbol)
+                break;
+            case 'box-7':
+                input.start.splice(6, 1, input.player2.symbol)
+                break;
+            case 'box-8':
+                input.start.splice(7, 1, input.player2.symbol)
+                break;
+            case 'box-9':
+                input.start.splice(8, 1, input.player2.symbol)
+                break;
+            default:
+                console.log('not set')
+                break;
+        }
     }
 }
