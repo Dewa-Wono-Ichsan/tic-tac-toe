@@ -90,35 +90,63 @@ start()
 
 function inputSymbolPlayer(event){
 
+    const symbol = {
+        
+        'player_1': {
+    
+            'box_1': input.input1(0),
+            'box_2': input.input1(1),
+            'box_3': input.input1(2),
+            'box_4': input.input1(3),
+            'box_5': input.input1(4),
+            'box_6': input.input1(5),
+            'box_7': input.input1(6),
+            'box_8': input.input1(7),
+            'box_9': input.input1(8),
+        },
+        'player_2': {
+    
+            'box_1': input.input2(0),
+            'box_2': input.input2(1),
+            'box_3': input.input2(2),
+            'box_4': input.input2(3),
+            'box_5': input.input2(4),
+            'box_6': input.input2(5),
+            'box_7': input.input2(6),
+            'box_8': input.input2(7),
+            'box_9': input.input2(8),
+        },
+    }
+
     if(input.turn === 'player1'){
 
         switch (event.target.id){
             case 'box-1':
-                input.start.splice(0, 1, input.player1.symbol)
+                symbol.player_1.box_1
                 break;
             case 'box-2':
-                input.start.splice(1, 1, input.player1.symbol)
+                symbol.player_1.box_2
                 break;
             case 'box-3':
-                input.start.splice(2, 1, input.player1.symbol)
+                symbol.player_1.box_3
                 break;
             case 'box-4':
-                input.start.splice(3, 1, input.player1.symbol)
+                symbol.player_1.box_4
                 break;
             case 'box-5':
-                input.start.splice(4, 1, input.player1.symbol)
+                symbol.player_1.box_5
                 break;
             case 'box-6':
-                input.start.splice(5, 1, input.player1.symbol)
+                symbol.player_1.box_6
                 break;
             case 'box-7':
-                input.start.splice(6, 1, input.player1.symbol)
+                symbol.player_1.box_7
                 break;
             case 'box-8':
-                input.start.splice(7, 1, input.player1.symbol)
+                symbol.player_1.box_8
                 break;
             case 'box-9':
-                input.start.splice(8, 1, input.player1.symbol)
+                symbol.player_1.box_9
                 break;
             default:
                 console.log('not set')
@@ -129,31 +157,31 @@ function inputSymbolPlayer(event){
 
         switch (event.target.id){
             case 'box-1':
-                input.start.splice(0, 1, input.player2.symbol)
+                symbol.player_2.box_1
                 break;
             case 'box-2':
-                input.start.splice(1, 1, input.player2.symbol)
+                symbol.player_2.box_2
                 break;
             case 'box-3':
-                input.start.splice(2, 1, input.player2.symbol)
+                symbol.player_2.box_3
                 break;
             case 'box-4':
-                input.start.splice(3, 1, input.player2.symbol)
+                symbol.player_2.box_4
                 break;
             case 'box-5':
-                input.start.splice(4, 1, input.player2.symbol)
+                symbol.player_2.box_5
                 break;
             case 'box-6':
-                input.start.splice(5, 1, input.player2.symbol)
+                symbol.player_2.box_6
                 break;
             case 'box-7':
-                input.start.splice(6, 1, input.player2.symbol)
+                symbol.player_2.box_7
                 break;
             case 'box-8':
-                input.start.splice(7, 1, input.player2.symbol)
+                symbol.player_2.box_8
                 break;
             case 'box-9':
-                input.start.splice(8, 1, input.player2.symbol)
+                symbol.player_2.box_9
                 break;
             default:
                 console.log('not set')
