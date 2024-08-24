@@ -56,8 +56,10 @@ const input = (function(){
         }
     }
     const turn = first()
+    const input1 = (value) => input.start.splice(value, 1, player1.symbol)
+    const input2 = (value) => input.start.splice(value, 1, player2.symbol)
 
-    return{start, player1, player2, turn}
+    return{start, player1, player2, turn, input1, input2}
 })()
 
 const playerInput = (function(){
