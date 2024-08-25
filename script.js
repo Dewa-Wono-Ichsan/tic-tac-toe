@@ -56,10 +56,8 @@ const input = (function(){
         }
     }
     const turn = first()
-    const input1 = (value) => input.start.splice(value, 1, player1.symbol)
-    const input2 = (value) => input.start.splice(value, 1, player2.symbol)
 
-    return{start, player1, player2, turn, input1, input2}
+    return{start, player1, player2, turn}
 })()
 
 const playerInput = (function(){
@@ -79,7 +77,7 @@ function start(){
 
     function play(){
 
-        playerInput.boardGame.addEventListener('click', inputSymbolPlayer)
+        playerInput.boardGame.addEventListener('click', inputPlayer)
     }
 
     return startInt()
@@ -88,65 +86,44 @@ function start(){
 
 start()
 
-function inputSymbolPlayer(event){
+function inputPlayer(event){
 
-    const symbol = {
-        
-        'player_1': {
-    
-            'box_1': input.input1(0),
-            'box_2': input.input1(1),
-            'box_3': input.input1(2),
-            'box_4': input.input1(3),
-            'box_5': input.input1(4),
-            'box_6': input.input1(5),
-            'box_7': input.input1(6),
-            'box_8': input.input1(7),
-            'box_9': input.input1(8),
-        },
-        'player_2': {
-    
-            'box_1': input.input2(0),
-            'box_2': input.input2(1),
-            'box_3': input.input2(2),
-            'box_4': input.input2(3),
-            'box_5': input.input2(4),
-            'box_6': input.input2(5),
-            'box_7': input.input2(6),
-            'box_8': input.input2(7),
-            'box_9': input.input2(8),
-        },
+    function symbol1(position){
+        return input.start.splice(position-1, 1, input.player1.symbol)
+    }
+    function symbol2(position){
+        return input.start.splice(position-1, 1, input.player2.symbol)
     }
 
     if(input.turn === 'player1'){
 
         switch (event.target.id){
             case 'box-1':
-                symbol.player_1.box_1
+                symbol1(1)
                 break;
             case 'box-2':
-                symbol.player_1.box_2
+                symbol1(2)
                 break;
             case 'box-3':
-                symbol.player_1.box_3
+                symbol1(3)
                 break;
             case 'box-4':
-                symbol.player_1.box_4
+                symbol1(4)
                 break;
             case 'box-5':
-                symbol.player_1.box_5
+                symbol1(5)
                 break;
             case 'box-6':
-                symbol.player_1.box_6
+                symbol1(6)
                 break;
             case 'box-7':
-                symbol.player_1.box_7
+                symbol1(7)
                 break;
             case 'box-8':
-                symbol.player_1.box_8
+                symbol1(8)
                 break;
             case 'box-9':
-                symbol.player_1.box_9
+                symbol1(9)
                 break;
             default:
                 console.log('not set')
@@ -157,31 +134,31 @@ function inputSymbolPlayer(event){
 
         switch (event.target.id){
             case 'box-1':
-                symbol.player_2.box_1
+                symbol2(1)
                 break;
             case 'box-2':
-                symbol.player_2.box_2
+                symbol2(2)
                 break;
             case 'box-3':
-                symbol.player_2.box_3
+                symbol2(3)
                 break;
             case 'box-4':
-                symbol.player_2.box_4
+                symbol2(4)
                 break;
             case 'box-5':
-                symbol.player_2.box_5
+                symbol2(5)
                 break;
             case 'box-6':
-                symbol.player_2.box_6
+                symbol2(6)
                 break;
             case 'box-7':
-                symbol.player_2.box_7
+                symbol2(7)
                 break;
             case 'box-8':
-                symbol.player_2.box_8
+                symbol2(8)
                 break;
             case 'box-9':
-                symbol.player_2.box_9
+                symbol2(9)
                 break;
             default:
                 console.log('not set')
