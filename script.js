@@ -95,74 +95,97 @@ function inputPlayer(event){
         return input.start.splice(position-1, 1, input.player2.symbol)
     }
 
+    const scan1 = input.start.filter(sign1Detect).length
+    function sign1Detect(sign){
+        return sign === input.player1.symbol        
+    }
+    const scan2 = input.start.filter(sign2Detect).length
+    function sign2Detect(sign){
+        return sign === input.player2.symbol        
+    }
+
     if(input.turn === 'player1'){
 
-        switch (event.target.id){
-            case 'box-1':
-                symbol1(1)
-                break;
-            case 'box-2':
-                symbol1(2)
-                break;
-            case 'box-3':
-                symbol1(3)
-                break;
-            case 'box-4':
-                symbol1(4)
-                break;
-            case 'box-5':
-                symbol1(5)
-                break;
-            case 'box-6':
-                symbol1(6)
-                break;
-            case 'box-7':
-                symbol1(7)
-                break;
-            case 'box-8':
-                symbol1(8)
-                break;
-            case 'box-9':
-                symbol1(9)
-                break;
-            default:
-                console.log('not set')
-                break;
+        if(scan1 === 0 && scan2 === 0){
+
+            switch (event.target.id){
+                case 'box-1':
+                    symbol1(1)
+                    break;
+                case 'box-2':
+                    symbol1(2)
+                    break;
+                case 'box-3':
+                    symbol1(3)
+                    break;
+                case 'box-4':
+                    symbol1(4)
+                    break;
+                case 'box-5':
+                    symbol1(5)
+                    break;
+                case 'box-6':
+                    symbol1(6)
+                    break;
+                case 'box-7':
+                    symbol1(7)
+                    break;
+                case 'box-8':
+                    symbol1(8)
+                    break;
+                case 'box-9':
+                    symbol1(9)
+                    break;
+                default:
+                    console.log('not set')
+                    break;
+            }
+        }else{
+            console.error('not set');
         }
+
 
     }else if(input.turn === 'player2'){
 
-        switch (event.target.id){
-            case 'box-1':
-                symbol2(1)
-                break;
-            case 'box-2':
-                symbol2(2)
-                break;
-            case 'box-3':
-                symbol2(3)
-                break;
-            case 'box-4':
-                symbol2(4)
-                break;
-            case 'box-5':
-                symbol2(5)
-                break;
-            case 'box-6':
-                symbol2(6)
-                break;
-            case 'box-7':
-                symbol2(7)
-                break;
-            case 'box-8':
-                symbol2(8)
-                break;
-            case 'box-9':
-                symbol2(9)
-                break;
-            default:
-                console.log('not set')
-                break;
+        if(scan1 === 0 && scan2 === 0){
+
+            switch (event.target.id){
+                case 'box-1':
+                    symbol2(1)
+                    break;
+                case 'box-2':
+                    symbol2(2)
+                    break;
+                case 'box-3':
+                    symbol2(3)
+                    break;
+                case 'box-4':
+                    symbol2(4)
+                    break;
+                case 'box-5':
+                    symbol2(5)
+                    break;
+                case 'box-6':
+                    symbol2(6)
+                    break;
+                case 'box-7':
+                    symbol2(7)
+                    break;
+                case 'box-8':
+                    symbol2(8)
+                    break;
+                case 'box-9':
+                    symbol2(9)
+                    break;
+                default:
+                    console.log('not set')
+                    break;
+            }
+        }else{
+            console.error('not set')
         }
+
+    }else{
+        console.error('not set');
     }
 }
