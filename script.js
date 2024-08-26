@@ -140,6 +140,71 @@ function inputPlayer(event){
                     console.log('not set')
                     break;
             }
+        }else if(scan1 > scan2){
+            switch (event.target.id){
+                case 'box-1':
+                    symbol2(1)
+                    break;
+                case 'box-2':
+                    symbol2(2)
+                    break;
+                case 'box-3':
+                    symbol2(3)
+                    break;
+                case 'box-4':
+                    symbol2(4)
+                    break;
+                case 'box-5':
+                    symbol2(5)
+                    break;
+                case 'box-6':
+                    symbol2(6)
+                    break;
+                case 'box-7':
+                    symbol2(7)
+                    break;
+                case 'box-8':
+                    symbol2(8)
+                    break;
+                case 'box-9':
+                    symbol2(9)
+                    break;
+                default:
+                    break;
+            }
+        }else if(scan1 === scan2){
+            switch (event.target.id){
+                case 'box-1':
+                    symbol1(1)
+                    break;
+                case 'box-2':
+                    symbol1(2)
+                    break;
+                case 'box-3':
+                    symbol1(3)
+                    break;
+                case 'box-4':
+                    symbol1(4)
+                    break;
+                case 'box-5':
+                    symbol1(5)
+                    break;
+                case 'box-6':
+                    symbol1(6)
+                    break;
+                case 'box-7':
+                    symbol1(7)
+                    break;
+                case 'box-8':
+                    symbol1(8)
+                    break;
+                case 'box-9':
+                    symbol1(9)
+                    break;
+            
+                default:
+                    break;
+            }
         }else{
             console.error('not set');
         }
@@ -179,6 +244,72 @@ function inputPlayer(event){
                     break;
                 default:
                     console.log('not set')
+                    break;
+            }
+        }else if(scan1 < scan2){
+            switch (event.target.id){
+                case 'box-1':
+                    symbol1(1)
+                    break;
+                case 'box-2':
+                    symbol1(2)
+                    break;
+                case 'box-3':
+                    symbol1(3)
+                    break;
+                case 'box-4':
+                    symbol1(4)
+                    break;
+                case 'box-5':
+                    symbol1(5)
+                    break;
+                case 'box-6':
+                    symbol1(6)
+                    break;
+                case 'box-7':
+                    symbol1(7)
+                    break;
+                case 'box-8':
+                    symbol1(8)
+                    break;
+                case 'box-9':
+                    symbol1(9)
+                    break;
+                default:
+                    console.error('not set');
+                    break;
+            }
+        }else if(scan1 === scan2){
+            switch (event.target.id){
+                case 'box-1':
+                    symbol2(1)
+                    break;
+                case 'box-2':
+                    symbol2(2)
+                    break;
+                case 'box-3':
+                    symbol2(3)
+                    break;
+                case 'box-4':
+                    symbol2(4)
+                    break;
+                case 'box-5':
+                    symbol2(5)
+                    break;
+                case 'box-6':
+                    symbol2(6)
+                    break;
+                case 'box-7':
+                    symbol2(7)
+                    break;
+                case 'box-8':
+                    symbol2(8)
+                    break;
+                case 'box-9':
+                    symbol2(9)
+                    break;
+                default:
+                    console.error('not set');
                     break;
             }
         }else{
