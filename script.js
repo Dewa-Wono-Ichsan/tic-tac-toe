@@ -1,13 +1,14 @@
 function board(){
 
     let field = []
+    const empty = ''
     for (let index = 0; index < 9; index++) {
-        field.push('')
+        field.push(empty)
         
     }
     let symbolO = 'O'
     let symbolX = 'X'
-    return{field, symbolO, symbolX}
+    return{field, empty, symbolO, symbolX}
 }
 
 function player(name,symbol){
