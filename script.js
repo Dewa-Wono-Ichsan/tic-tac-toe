@@ -144,31 +144,85 @@ function inputPlayer(event){
         }else if(scan1 > scan2){
             switch (event.target.id){
                 case 'box-1':
-                    symbol2(1)
+                    if(input.start.at(0) !== board().empty){
+
+                        alert('choose another box')
+                    }else if(input.start.at(0) === board().empty){
+                        
+                        symbol2(1)
+                    }
                     break;
                 case 'box-2':
-                    symbol2(2)
+                    if(input.start.at(1) !== board().empty){
+
+                        alert('choose another box')
+                    }else if(input.start.at(1) === board().empty){
+                        
+                        symbol2(2)
+                    }
                     break;
                 case 'box-3':
-                    symbol2(3)
+                    if(input.start.at(2) !== board().empty){
+
+                        alert('choose another box')
+                    }else if(input.start.at(2) === board().empty){
+                        
+                        symbol2(3)
+                    }
                     break;
                 case 'box-4':
-                    symbol2(4)
+                    if(input.start.at(3) !== board().empty){
+
+                        alert('choose another box')
+                    }else if(input.start.at(3) === board().empty){
+                        
+                        symbol2(4)
+                    }
                     break;
                 case 'box-5':
-                    symbol2(5)
+                    if(input.start.at(4) !== board().empty){
+
+                        alert('choose another box')
+                    }else if(input.start.at(4) === board().empty){
+                        
+                        symbol2(5)
+                    }
                     break;
                 case 'box-6':
-                    symbol2(6)
+                    if(input.start.at(5) !== board().empty){
+
+                        alert('choose another box')
+                    }else if(input.start.at(5) === board().empty){
+                        
+                        symbol2(6)
+                    }
                     break;
                 case 'box-7':
-                    symbol2(7)
+                    if(input.start.at(6) !== board().empty){
+
+                        alert('choose another box')
+                    }else if(input.start.at(6) === board().empty){
+                        
+                        symbol2(7)
+                    }
                     break;
                 case 'box-8':
-                    symbol2(8)
+                    if(input.start.at(7) !== board().empty){
+
+                        alert('choose another box')
+                    }else if(input.start.at(7) === board().empty){
+                        
+                        symbol2(8)
+                    }
                     break;
                 case 'box-9':
-                    symbol2(9)
+                    if(input.start.at(8) !== board().empty){
+
+                        alert('choose another box')
+                    }else if(input.start.at(8) === board().empty){
+                        
+                        symbol2(9)
+                    }
                     break;
                 default:
                     break;
@@ -176,31 +230,85 @@ function inputPlayer(event){
         }else if(scan1 === scan2){
             switch (event.target.id){
                 case 'box-1':
-                    symbol1(1)
+                    if(input.start.at(0) !== board().empty){
+
+                        alert('choose another box')
+                    }else if(input.start.at(0) === board().empty){
+                        
+                        symbol1(1)
+                    }
                     break;
                 case 'box-2':
-                    symbol1(2)
+                    if(input.start.at(1) !== board().empty){
+
+                        alert('choose another box')
+                    }else if(input.start.at(1) === board().empty){
+                        
+                        symbol1(2)
+                    }
                     break;
                 case 'box-3':
-                    symbol1(3)
+                    if(input.start.at(2) !== board().empty){
+
+                        alert('choose another box')
+                    }else if(input.start.at(2) === board().empty){
+                        
+                        symbol1(3)
+                    }
                     break;
                 case 'box-4':
-                    symbol1(4)
+                    if(input.start.at(3) !== board().empty){
+
+                        alert('choose another box')
+                    }else if(input.start.at(3) === board().empty){
+                        
+                        symbol1(4)
+                    }
                     break;
                 case 'box-5':
-                    symbol1(5)
+                    if(input.start.at(4) !== board().empty){
+
+                        alert('choose another box')
+                    }else if(input.start.at(4) === board().empty){
+                        
+                        symbol1(5)
+                    }
                     break;
                 case 'box-6':
-                    symbol1(6)
+                    if(input.start.at(5) !== board().empty){
+
+                        alert('choose another box')
+                    }else if(input.start.at(5) === board().empty){
+                        
+                        symbol1(6)
+                    }
                     break;
                 case 'box-7':
-                    symbol1(7)
+                    if(input.start.at(6) !== board().empty){
+
+                        alert('choose another box')
+                    }else if(input.start.at(6) === board().empty){
+                        
+                        symbol1(7)
+                    }
                     break;
                 case 'box-8':
-                    symbol1(8)
+                    if(input.start.at(7) !== board().empty){
+
+                        alert('choose another box')
+                    }else if(input.start.at(7) === board().empty){
+                        
+                        symbol1(8)
+                    }
                     break;
                 case 'box-9':
-                    symbol1(9)
+                    if(input.start.at(8) !== board().empty){
+
+                        alert('choose another box')
+                    }else if(input.start.at(8) === board().empty){
+                        
+                        symbol1(9)
+                    }
                     break;
             
                 default:
@@ -250,31 +358,85 @@ function inputPlayer(event){
         }else if(scan1 < scan2){
             switch (event.target.id){
                 case 'box-1':
-                    symbol1(1)
+                    if(input.start.at(0) !== board().empty){
+                        
+                        alert(`choose another box`)
+                    }else if(input.start.at(0) === board().empty){
+                        
+                        symbol1(1)
+                    }
                     break;
                 case 'box-2':
-                    symbol1(2)
+                    if(input.start.at(1) !== board().empty){
+
+                        alert('choose another box')
+                    }else if(input.start.at(1) === board().empty){
+                        
+                        symbol1(2)
+                    }
                     break;
                 case 'box-3':
-                    symbol1(3)
+                    if(input.start.at(2) !== board().empty){
+
+                        alert('choose another box')
+                    }else if(input.start.at(2) === board().empty){
+                        
+                        symbol1(3)
+                    }
                     break;
                 case 'box-4':
-                    symbol1(4)
+                    if(input.start.at(3) !== board().empty){
+
+                        alert('choose another box')
+                    }else if(input.start.at(3) === board().empty){
+                        
+                        symbol1(4)
+                    }
                     break;
                 case 'box-5':
-                    symbol1(5)
+                    if(input.start.at(4) !== board().empty){
+
+                        alert('choose another box')
+                    }else if(input.start.at(4) === board().empty){
+                        
+                        symbol1(5)
+                    }
                     break;
                 case 'box-6':
-                    symbol1(6)
+                    if(input.start.at(5) !== board().empty){
+
+                        alert('choose another box')
+                    }else if(input.start.at(5) === board().empty){
+                        
+                        symbol1(6)
+                    }
                     break;
                 case 'box-7':
-                    symbol1(7)
+                    if(input.start.at(6) !== board().empty){
+
+                        alert('choose another box')
+                    }else if(input.start.at(6) === board().empty){
+                        
+                        symbol1(7)
+                    }
                     break;
                 case 'box-8':
-                    symbol1(8)
+                    if(input.start.at(7) !== board().empty){
+
+                        alert('choose another box')
+                    }else if(input.start.at(7) === board().empty){
+                        
+                        symbol1(8)
+                    }
                     break;
                 case 'box-9':
-                    symbol1(9)
+                    if(input.start.at(8) !== board().empty){
+
+                        alert('choose another box')
+                    }else if(input.start.at(8) === board().empty){
+                        
+                        symbol1(9)
+                    }
                     break;
                 default:
                     console.error('not set');
@@ -283,31 +445,85 @@ function inputPlayer(event){
         }else if(scan1 === scan2){
             switch (event.target.id){
                 case 'box-1':
-                    symbol2(1)
+                    if(input.start.at(0) !== board().empty){
+
+                        alert('choose another box')
+                    }else if(input.start.at(0) === board().empty){
+                        
+                        symbol2(1)
+                    }
                     break;
                 case 'box-2':
-                    symbol2(2)
+                    if(input.start.at(1) !== board().empty){
+
+                        alert('choose another box')
+                    }else if(input.start.at(1) === board().empty){
+                        
+                        symbol2(2)
+                    }
                     break;
                 case 'box-3':
-                    symbol2(3)
+                    if(input.start.at(2) !== board().empty){
+
+                        alert('choose another box')
+                    }else if(input.start.at(2) === board().empty){
+                        
+                        symbol2(3)
+                    }
                     break;
                 case 'box-4':
-                    symbol2(4)
+                    if(input.start.at(3) !== board().empty){
+
+                        alert('choose another box')
+                    }else if(input.start.at(3) === board().empty){
+                        
+                        symbol2(4)
+                    }
                     break;
                 case 'box-5':
-                    symbol2(5)
+                    if(input.start.at(4) !== board().empty){
+
+                        alert('choose another box')
+                    }else if(input.start.at(4) === board().empty){
+                        
+                        symbol2(5)
+                    }
                     break;
                 case 'box-6':
-                    symbol2(6)
+                    if(input.start.at(5) !== board().empty){
+
+                        alert('choose another box')
+                    }else if(input.start.at(5) === board().empty){
+                        
+                        symbol2(6)
+                    }
                     break;
                 case 'box-7':
-                    symbol2(7)
+                    if(input.start.at(6) !== board().empty){
+
+                        alert('choose another box')
+                    }else if(input.start.at(6) === board().empty){
+                        
+                        symbol2(7)
+                    }
                     break;
                 case 'box-8':
-                    symbol2(8)
+                    if(input.start.at(7) !== board().empty){
+
+                        alert('choose another box')
+                    }else if(input.start.at(7) === board().empty){
+                        
+                        symbol2(8)
+                    }
                     break;
                 case 'box-9':
-                    symbol2(9)
+                    if(input.start.at(8) !== board().empty){
+
+                        alert('choose another box')
+                    }else if(input.start.at(8) === board().empty){
+                        
+                        symbol2(9)
+                    }
                     break;
                 default:
                     console.error('not set');
