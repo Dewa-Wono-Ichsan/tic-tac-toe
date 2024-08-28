@@ -151,7 +151,27 @@ function inputPlayer(event){
 
                 || input.start.at(0) === input.player1.symbol
                 && input.start.at(3) === input.player1.symbol
-                && input.start.at(6) === input.player1.symbol){
+                && input.start.at(6) === input.player1.symbol
+
+                || input.start.at(1) === input.player1.symbol
+                && input.start.at(4) === input.player1.symbol
+                && input.start.at(7) === input.player1.symbol
+            
+                || input.start.at(3) === input.player1.symbol
+                && input.start.at(4) === input.player1.symbol
+                && input.start.at(5) === input.player1.symbol
+            
+                || input.start.at(2) === input.player1.symbol
+                && input.start.at(4) === input.player1.symbol
+                && input.start.at(6) === input.player1.symbol
+            
+                || input.start.at(2) === input.player1.symbol
+                && input.start.at(5) === input.player1.symbol
+                && input.start.at(8) === input.player1.symbol
+            
+                || input.start.at(6) === input.player1.symbol
+                && input.start.at(7) === input.player1.symbol
+                && input.start.at(8) === input.player1.symbol){
 
                     alert(`game over! ${input.player1.name} win!`)
         }else if(input.start.at(0) === input.player2.symbol
@@ -164,7 +184,27 @@ function inputPlayer(event){
             
                 || input.start.at(0) === input.player2.symbol
                 && input.start.at(3) === input.player2.symbol
-                && input.start.at(6) === input.player2.symbol){
+                && input.start.at(6) === input.player2.symbol
+                
+                || input.start.at(1) === input.player2.symbol
+                && input.start.at(4) === input.player2.symbol
+                && input.start.at(7) === input.player2.symbol
+
+                || input.start.at(3) === input.player2.symbol
+                && input.start.at(4) === input.player2.symbol
+                && input.start.at(5) === input.player2.symbol
+            
+                || input.start.at(2) === input.player2.symbol
+                && input.start.at(4) === input.player2.symbol
+                && input.start.at(6) === input.player2.symbol
+            
+                || input.start.at(2) === input.player2.symbol
+                && input.start.at(5) === input.player2.symbol
+                && input.start.at(8) === input.player2.symbol
+            
+                || input.start.at(6) === input.player2.symbol
+                && input.start.at(7) === input.player2.symbol
+                && input.start.at(8) === input.player2.symbol){
 
                     alert(`game over!${input.player2.name} win!`)
         }else if(scan1 > scan2){
@@ -391,7 +431,27 @@ function inputPlayer(event){
             
                 || input.start.at(0) === input.player1.symbol
                 && input.start.at(3) === input.player1.symbol
-                && input.start.at(6) === input.player1.symbol){
+                && input.start.at(6) === input.player1.symbol
+
+                || input.start.at(1) === input.player1.symbol
+                && input.start.at(4) === input.player1.symbol
+                && input.start.at(7) === input.player1.symbol
+
+                || input.start.at(3) === input.player1.symbol
+                && input.start.at(4) === input.player1.symbol
+                && input.start.at(5) === input.player1.symbol
+            
+                || input.start.at(2) === input.player1.symbol
+                && input.start.at(4) === input.player1.symbol
+                && input.start.at(6) === input.player1.symbol
+            
+                || input.start.at(2) === input.player1.symbol
+                && input.start.at(5) === input.player1.symbol
+                && input.start.at(8) === input.player1.symbol
+            
+                || input.start.at(6) === input.player1.symbol
+                && input.start.at(7) === input.player1.symbol
+                && input.start.at(8) === input.player1.symbol){
 
                     alert(`game over! ${input.player1.name} win!`)
         }else if(input.start.at(0) === input.player2.symbol
@@ -404,7 +464,27 @@ function inputPlayer(event){
             
                 || input.start.at(0) === input.player2.symbol
                 && input.start.at(3) === input.player2.symbol
-                && input.start.at(6) === input.player2.symbol){
+                && input.start.at(6) === input.player2.symbol
+            
+                || input.start.at(1) === input.player2.symbol
+                && input.start.at(4) === input.player2.symbol
+                && input.start.at(7) === input.player2.symbol
+
+                || input.start.at(3) === input.player2.symbol
+                && input.start.at(4) === input.player2.symbol
+                && input.start.at(5) === input.player2.symbol
+            
+                || input.start.at(2) === input.player2.symbol
+                && input.start.at(4) === input.player2.symbol
+                && input.start.at(6) === input.player2.symbol
+            
+                || input.start.at(2) === input.player2.symbol
+                && input.start.at(5) === input.player2.symbol
+                && input.start.at(8) === input.player2.symbol
+            
+                || input.start.at(6) === input.player2.symbol
+                && input.start.at(7) === input.player2.symbol
+                && input.start.at(8) === input.player2.symbol){
 
                     alert(`game over! ${input.player2.name} win!`)
         }else if(scan1 < scan2){
