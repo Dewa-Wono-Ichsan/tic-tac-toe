@@ -216,6 +216,19 @@ function inputPlayer(event){
                     }else if(input.start.at(0) === board().empty){
                         
                         symbol2(1)
+                        if(input.start.at(0) === input.player2.symbol
+                        && input.start.at(1) === input.player2.symbol
+                        && input.start.at(2) === input.player2.symbol
+        
+                        || input.start.at(0) === input.player2.symbol
+                        && input.start.at(4) === input.player2.symbol
+                        && input.start.at(8) === input.player2.symbol
+                    
+                        || input.start.at(0) === input.player2.symbol
+                        && input.start.at(3) === input.player2.symbol
+                        && input.start.at(6) === input.player2.symbol){
+                            console.warn(`${input.player2.name} win!`)
+                        }
                     }
                     break;
                 case 'box-2':
@@ -302,6 +315,19 @@ function inputPlayer(event){
                     }else if(input.start.at(0) === board().empty){
                         
                         symbol1(1)
+                        if(input.start.at(0) === input.player1.symbol
+                        && input.start.at(1) === input.player1.symbol
+                        && input.start.at(2) === input.player1.symbol
+        
+                        || input.start.at(0) === input.player1.symbol
+                        && input.start.at(4) === input.player1.symbol
+                        && input.start.at(8) === input.player1.symbol
+                    
+                        || input.start.at(0) === input.player1.symbol
+                        && input.start.at(3) === input.player1.symbol
+                        && input.start.at(6) === input.player1.symbol){
+                            console.warn(`${input.player1.name} win!`);
+                        }
                     }
                     break;
                 case 'box-2':
@@ -496,6 +522,19 @@ function inputPlayer(event){
                     }else if(input.start.at(0) === board().empty){
                         
                         symbol1(1)
+                        if(input.start.at(0) === input.player1.symbol
+                        && input.start.at(1) === input.player1.symbol
+                        && input.start.at(2) === input.player1.symbol
+        
+                        || input.start.at(0) === input.player1.symbol
+                        && input.start.at(4) === input.player1.symbol
+                        && input.start.at(8) === input.player1.symbol
+                    
+                        || input.start.at(0) === input.player1.symbol
+                        && input.start.at(3) === input.player1.symbol
+                        && input.start.at(6) === input.player1.symbol){
+                            console.warn(`${input.player1.name} win!`);
+                        }
                     }
                     break;
                 case 'box-2':
@@ -583,6 +622,19 @@ function inputPlayer(event){
                     }else if(input.start.at(0) === board().empty){
                         
                         symbol2(1)
+                        if(input.start.at(0) === input.player2.symbol
+                        && input.start.at(1) === input.player2.symbol
+                        && input.start.at(2) === input.player2.symbol
+        
+                        || input.start.at(0) === input.player2.symbol
+                        && input.start.at(4) === input.player2.symbol
+                        && input.start.at(8) === input.player2.symbol
+                    
+                        || input.start.at(0) === input.player2.symbol
+                        && input.start.at(3) === input.player2.symbol
+                        && input.start.at(6) === input.player2.symbol){
+                            console.warn(`${input.player2.name} win!`);
+                        }
                     }
                     break;
                 case 'box-2':
