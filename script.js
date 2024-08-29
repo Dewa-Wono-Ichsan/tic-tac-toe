@@ -322,6 +322,15 @@ function inputPlayer(event){
                     }else if(input.start.at(5) === board().empty){
                         
                         symbol2(6)
+                        if(input.start.at(3) === input.player2.symbol
+                        && input.start.at(4) === input.player2.symbol
+                        && input.start.at(5) === input.player2.symbol
+
+                        || input.start.at(2) === input.player2.symbol
+                        && input.start.at(5) === input.player2.symbol
+                        && input.start.at(8) === input.player2.symbol){
+                            console.warn(`${input.player2.name} win!`)
+                        }
                     }
                     break;
                 case 'box-7':
@@ -469,6 +478,15 @@ function inputPlayer(event){
                     }else if(input.start.at(5) === board().empty){
                         
                         symbol1(6)
+                        if(input.start.at(3) === input.player1.symbol
+                        && input.start.at(4) === input.player1.symbol
+                        && input.start.at(5) === input.player1.symbol
+
+                        || input.start.at(2) === input.player1.symbol
+                        && input.start.at(5) === input.player1.symbol
+                        && input.start.at(8) === input.player1.symbol){
+                            console.warn(`${input.player1.name} win!`)
+                        }
                     }
                     break;
                 case 'box-7':
@@ -724,6 +742,15 @@ function inputPlayer(event){
                     }else if(input.start.at(5) === board().empty){
                         
                         symbol1(6)
+                        if(input.start.at(3) === input.player1.symbol
+                        && input.start.at(4) === input.player1.symbol
+                        && input.start.at(5) === input.player1.symbol
+
+                        || input.start.at(2) === input.player1.symbol
+                        && input.start.at(5) === input.player1.symbol
+                        && input.start.at(8) === input.player1.symbol){
+                            console.warn(`${input.player1.name} win!`)
+                        }
                     }
                     break;
                 case 'box-7':
@@ -872,6 +899,15 @@ function inputPlayer(event){
                     }else if(input.start.at(5) === board().empty){
                         
                         symbol2(6)
+                        if(input.start.at(3) === input.player2.symbol
+                        && input.start.at(4) === input.player2.symbol
+                        && input.start.at(5) === input.player2.symbol
+
+                        || input.start.at(2) === input.player2.symbol
+                        && input.start.at(5) === input.player2.symbol
+                        && input.start.at(8) === input.player2.symbol){
+                            console.warn(`${input.player2.name} win!`)
+                        }
                     }
                     break;
                 case 'box-7':
