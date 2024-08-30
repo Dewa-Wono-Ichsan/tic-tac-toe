@@ -62,11 +62,21 @@ const input = (function(){
 })()
 
 const playerInput = (function(){
+     const container = document.querySelector('.container')
      const start = document.querySelector('.start')
      const boardGame = document.querySelector('.container-board')
      
-     return{start, boardGame}
+     return{container, start, boardGame}
 })()
+
+function display(){
+    const btn = document.createElement('button')
+    btn.classList.toggle('restart')
+    btn.textContent = 'restart'
+    playerInput.container.appendChild(btn)
+
+    return btn
+}
 
 function start(){
 
@@ -79,6 +89,8 @@ function start(){
     function play(){
 
         playerInput.boardGame.addEventListener('click', inputPlayer)
+        playerInput.start.remove()
+        display()
     }
 
     return startInt()
