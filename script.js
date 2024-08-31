@@ -65,8 +65,9 @@ const playerInput = (function(){
      const container = document.querySelector('.container')
      const start = document.querySelector('.start')
      const boardGame = document.querySelector('.container-board')
+     const restart = document.querySelector('.restart')
      
-     return{container, start, boardGame}
+     return{container, start, boardGame, restart}
 })()
 
 function display(){
@@ -74,6 +75,9 @@ function display(){
     btn.classList.toggle('restart')
     btn.textContent = 'restart'
     playerInput.container.appendChild(btn)
+    btn.addEventListener('click',function(){
+        input.start = board().field
+    })
 
     return btn
 }
