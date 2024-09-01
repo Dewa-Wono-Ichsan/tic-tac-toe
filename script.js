@@ -64,11 +64,46 @@ const input = (function(){
 const playerInput = (function(){
      const container = document.querySelector('.container')
      const start = document.querySelector('.start')
-     const boardGame = document.querySelector('.container-board')
      const restart = document.querySelector('.restart')
+     const boardGame = document.querySelector('.container-board')
+     const box1 = document.querySelector('#box-1')
+     const box2 = document.querySelector('#box-2')
+     const box3 = document.querySelector('#box-3')
+     const box4 = document.querySelector('#box-4')
+     const box5 = document.querySelector('#box-5')
+     const box6 = document.querySelector('#box-6')
+     const box7 = document.querySelector('#box-7')
+     const box8 = document.querySelector('#box-8')
+     const box9 = document.querySelector('#box-9')
      
-     return{container, start, boardGame, restart}
+     return{
+        container,
+        start,
+        restart,
+        boardGame,
+        box1,
+        box2,
+        box3,
+        box4,
+        box5,
+        box6,
+        box7,
+        box8,
+        box9,
+     }
 })()
+
+function linkDataSymbol(arr){
+    playerInput.box1.textContent = arr.at(0)
+    playerInput.box2.textContent = arr.at(1) 
+    playerInput.box3.textContent = arr.at(2) 
+    playerInput.box4.textContent = arr.at(3) 
+    playerInput.box5.textContent = arr.at(4) 
+    playerInput.box6.textContent = arr.at(5) 
+    playerInput.box7.textContent = arr.at(6) 
+    playerInput.box8.textContent = arr.at(7) 
+    playerInput.box9.textContent = arr.at(8) 
+}
 
 function display(){
     const btn = document.createElement('button')
@@ -77,6 +112,7 @@ function display(){
     playerInput.container.appendChild(btn)
     btn.addEventListener('click',function(){
         input.start = board().field
+        linkDataSymbol(input.start)
     })
 
     return btn
@@ -128,30 +164,39 @@ function inputPlayer(event){
             switch (event.target.id){
                 case 'box-1':
                     symbol1(1)
+                    linkDataSymbol(input.start)
                     break;
                 case 'box-2':
                     symbol1(2)
+                    linkDataSymbol(input.start)
                     break;
                 case 'box-3':
                     symbol1(3)
+                    linkDataSymbol(input.start)
                     break;
                 case 'box-4':
                     symbol1(4)
+                    linkDataSymbol(input.start)
                     break;
                 case 'box-5':
                     symbol1(5)
+                    linkDataSymbol(input.start)
                     break;
                 case 'box-6':
                     symbol1(6)
+                    linkDataSymbol(input.start)
                     break;
                 case 'box-7':
                     symbol1(7)
+                    linkDataSymbol(input.start)
                     break;
                 case 'box-8':
                     symbol1(8)
+                    linkDataSymbol(input.start)
                     break;
                 case 'box-9':
                     symbol1(9)
+                    linkDataSymbol(input.start)
                     break;
                 default:
                     console.log('not set')
@@ -232,6 +277,7 @@ function inputPlayer(event){
                     }else if(input.start.at(0) === board().empty){
                         
                         symbol2(1)
+                        linkDataSymbol(input.start)
                         if(input.start.at(0) === input.player2.symbol
                         && input.start.at(1) === input.player2.symbol
                         && input.start.at(2) === input.player2.symbol
@@ -254,6 +300,7 @@ function inputPlayer(event){
                     }else if(input.start.at(1) === board().empty){
                         
                         symbol2(2)
+                        linkDataSymbol(input.start)
                         if(input.start.at(1) === input.player2.symbol
                         && input.start.at(4) === input.player2.symbol
                         && input.start.at(7) === input.player2.symbol
@@ -272,6 +319,7 @@ function inputPlayer(event){
                     }else if(input.start.at(2) === board().empty){
                         
                         symbol2(3)
+                        linkDataSymbol(input.start)
                         if(input.start.at(0) === input.player2.symbol
                         && input.start.at(1) === input.player2.symbol
                         && input.start.at(2) === input.player2.symbol
@@ -294,6 +342,7 @@ function inputPlayer(event){
                     }else if(input.start.at(3) === board().empty){
                         
                         symbol2(4)
+                        linkDataSymbol(input.start)
                         if(input.start.at(0) === input.player2.symbol
                         && input.start.at(3) === input.player2.symbol
                         && input.start.at(6) === input.player2.symbol
@@ -312,6 +361,7 @@ function inputPlayer(event){
                     }else if(input.start.at(4) === board().empty){
                         
                         symbol2(5)
+                        linkDataSymbol(input.start)
                         if(input.start.at(0) === input.player2.symbol
                         && input.start.at(4) === input.player2.symbol
                         && input.start.at(8) === input.player2.symbol
@@ -338,6 +388,7 @@ function inputPlayer(event){
                     }else if(input.start.at(5) === board().empty){
                         
                         symbol2(6)
+                        linkDataSymbol(input.start)
                         if(input.start.at(3) === input.player2.symbol
                         && input.start.at(4) === input.player2.symbol
                         && input.start.at(5) === input.player2.symbol
@@ -356,6 +407,7 @@ function inputPlayer(event){
                     }else if(input.start.at(6) === board().empty){
                         
                         symbol2(7)
+                        linkDataSymbol(input.start)
                         if(input.start.at(0) === input.player2.symbol
                         && input.start.at(3) === input.player2.symbol
                         && input.start.at(6) === input.player2.symbol
@@ -378,6 +430,7 @@ function inputPlayer(event){
                     }else if(input.start.at(7) === board().empty){
                         
                         symbol2(8)
+                        linkDataSymbol(input.start)
                         if(input.start.at(1) === input.player2.symbol
                         && input.start.at(4) === input.player2.symbol
                         && input.start.at(7) === input.player2.symbol
@@ -396,6 +449,7 @@ function inputPlayer(event){
                     }else if(input.start.at(8) === board().empty){
                         
                         symbol2(9)
+                        linkDataSymbol(input.start)
                         if(input.start.at(2) === input.player2.symbol
                         && input.start.at(5) === input.player2.symbol
                         && input.start.at(8) === input.player2.symbol
@@ -423,6 +477,7 @@ function inputPlayer(event){
                     }else if(input.start.at(0) === board().empty){
                         
                         symbol1(1)
+                        linkDataSymbol(input.start)
                         if(input.start.at(0) === input.player1.symbol
                         && input.start.at(1) === input.player1.symbol
                         && input.start.at(2) === input.player1.symbol
@@ -445,6 +500,7 @@ function inputPlayer(event){
                     }else if(input.start.at(1) === board().empty){
                         
                         symbol1(2)
+                        linkDataSymbol(input.start)
                         if(input.start.at(1) === input.player1.symbol
                         && input.start.at(4) === input.player1.symbol
                         && input.start.at(7) === input.player1.symbol
@@ -463,6 +519,7 @@ function inputPlayer(event){
                     }else if(input.start.at(2) === board().empty){
                         
                         symbol1(3)
+                        linkDataSymbol(input.start)
                         if(input.start.at(0) === input.player1.symbol
                         && input.start.at(1) === input.player1.symbol
                         && input.start.at(2) === input.player1.symbol
@@ -485,6 +542,7 @@ function inputPlayer(event){
                     }else if(input.start.at(3) === board().empty){
                         
                         symbol1(4)
+                        linkDataSymbol(input.start)
                         if(input.start.at(0) === input.player1.symbol
                         && input.start.at(3) === input.player1.symbol
                         && input.start.at(6) === input.player1.symbol
@@ -503,6 +561,7 @@ function inputPlayer(event){
                     }else if(input.start.at(4) === board().empty){
                         
                         symbol1(5)
+                        linkDataSymbol(input.start)
                         if(input.start.at(0) === input.player1.symbol
                         && input.start.at(4) === input.player1.symbol
                         && input.start.at(8) === input.player1.symbol
@@ -529,6 +588,7 @@ function inputPlayer(event){
                     }else if(input.start.at(5) === board().empty){
                         
                         symbol1(6)
+                        linkDataSymbol(input.start)
                         if(input.start.at(3) === input.player1.symbol
                         && input.start.at(4) === input.player1.symbol
                         && input.start.at(5) === input.player1.symbol
@@ -547,6 +607,7 @@ function inputPlayer(event){
                     }else if(input.start.at(6) === board().empty){
                         
                         symbol1(7)
+                        linkDataSymbol(input.start)
                         if(input.start.at(0) === input.player1.symbol
                         && input.start.at(3) === input.player1.symbol
                         && input.start.at(6) === input.player1.symbol
@@ -569,6 +630,7 @@ function inputPlayer(event){
                     }else if(input.start.at(7) === board().empty){
                         
                         symbol1(8)
+                        linkDataSymbol(input.start)
                         if(input.start.at(1) === input.player1.symbol
                         && input.start.at(4) === input.player1.symbol
                         && input.start.at(7) === input.player1.symbol
@@ -587,6 +649,7 @@ function inputPlayer(event){
                     }else if(input.start.at(8) === board().empty){
                         
                         symbol1(9)
+                        linkDataSymbol(input.start)
                         if(input.start.at(2) === input.player1.symbol
                         && input.start.at(5) === input.player1.symbol
                         && input.start.at(8) === input.player1.symbol
@@ -618,30 +681,39 @@ function inputPlayer(event){
             switch (event.target.id){
                 case 'box-1':
                     symbol2(1)
+                    linkDataSymbol(input.start)
                     break;
                 case 'box-2':
                     symbol2(2)
+                    linkDataSymbol(input.start)
                     break;
                 case 'box-3':
                     symbol2(3)
+                    linkDataSymbol(input.start)
                     break;
                 case 'box-4':
                     symbol2(4)
+                    linkDataSymbol(input.start)
                     break;
                 case 'box-5':
                     symbol2(5)
+                    linkDataSymbol(input.start)
                     break;
                 case 'box-6':
                     symbol2(6)
+                    linkDataSymbol(input.start)
                     break;
                 case 'box-7':
                     symbol2(7)
+                    linkDataSymbol(input.start)
                     break;
                 case 'box-8':
                     symbol2(8)
+                    linkDataSymbol(input.start)
                     break;
                 case 'box-9':
                     symbol2(9)
+                    linkDataSymbol(input.start)
                     break;
                 default:
                     console.log('not set')
@@ -722,6 +794,7 @@ function inputPlayer(event){
                     }else if(input.start.at(0) === board().empty){
                         
                         symbol1(1)
+                        linkDataSymbol(input.start)
                         if(input.start.at(0) === input.player1.symbol
                         && input.start.at(1) === input.player1.symbol
                         && input.start.at(2) === input.player1.symbol
@@ -744,6 +817,7 @@ function inputPlayer(event){
                     }else if(input.start.at(1) === board().empty){
                         
                         symbol1(2)
+                        linkDataSymbol(input.start)
                         if(input.start.at(1) === input.player1.symbol
                         && input.start.at(4) === input.player1.symbol
                         && input.start.at(7) === input.player1.symbol
@@ -762,6 +836,7 @@ function inputPlayer(event){
                     }else if(input.start.at(2) === board().empty){
                         
                         symbol1(3)
+                        linkDataSymbol(input.start)
                         if(input.start.at(0) === input.player1.symbol
                         && input.start.at(1) === input.player1.symbol
                         && input.start.at(2) === input.player1.symbol
@@ -784,6 +859,7 @@ function inputPlayer(event){
                     }else if(input.start.at(3) === board().empty){
                         
                         symbol1(4)
+                        linkDataSymbol(input.start)
                         if(input.start.at(0) === input.player1.symbol
                         && input.start.at(3) === input.player1.symbol
                         && input.start.at(6) === input.player1.symbol
@@ -802,6 +878,7 @@ function inputPlayer(event){
                     }else if(input.start.at(4) === board().empty){
                         
                         symbol1(5)
+                        linkDataSymbol(input.start)
                         if(input.start.at(0) === input.player1.symbol
                         && input.start.at(4) === input.player1.symbol
                         && input.start.at(8) === input.player1.symbol
@@ -828,6 +905,7 @@ function inputPlayer(event){
                     }else if(input.start.at(5) === board().empty){
                         
                         symbol1(6)
+                        linkDataSymbol(input.start)
                         if(input.start.at(3) === input.player1.symbol
                         && input.start.at(4) === input.player1.symbol
                         && input.start.at(5) === input.player1.symbol
@@ -846,6 +924,7 @@ function inputPlayer(event){
                     }else if(input.start.at(6) === board().empty){
                         
                         symbol1(7)
+                        linkDataSymbol(input.start)
                         if(input.start.at(0) === input.player1.symbol
                         && input.start.at(3) === input.player1.symbol
                         && input.start.at(6) === input.player1.symbol
@@ -868,6 +947,7 @@ function inputPlayer(event){
                     }else if(input.start.at(7) === board().empty){
                         
                         symbol1(8)
+                        linkDataSymbol(input.start)
                         if(input.start.at(1) === input.player1.symbol
                         && input.start.at(4) === input.player1.symbol
                         && input.start.at(7) === input.player1.symbol
@@ -886,6 +966,7 @@ function inputPlayer(event){
                     }else if(input.start.at(8) === board().empty){
                         
                         symbol1(9)
+                        linkDataSymbol(input.start)
                         if(input.start.at(2) === input.player1.symbol
                         && input.start.at(5) === input.player1.symbol
                         && input.start.at(8) === input.player1.symbol
@@ -914,6 +995,7 @@ function inputPlayer(event){
                     }else if(input.start.at(0) === board().empty){
                         
                         symbol2(1)
+                        linkDataSymbol(input.start)
                         if(input.start.at(0) === input.player2.symbol
                         && input.start.at(1) === input.player2.symbol
                         && input.start.at(2) === input.player2.symbol
@@ -936,6 +1018,7 @@ function inputPlayer(event){
                     }else if(input.start.at(1) === board().empty){
                         
                         symbol2(2)
+                        linkDataSymbol(input.start)
                         if(input.start.at(1) === input.player2.symbol
                         && input.start.at(4) === input.player2.symbol
                         && input.start.at(7) === input.player2.symbol
@@ -954,6 +1037,7 @@ function inputPlayer(event){
                     }else if(input.start.at(2) === board().empty){
                         
                         symbol2(3)
+                        linkDataSymbol(input.start)
                         if(input.start.at(0) === input.player2.symbol
                         && input.start.at(1) === input.player2.symbol
                         && input.start.at(2) === input.player2.symbol
@@ -976,6 +1060,7 @@ function inputPlayer(event){
                     }else if(input.start.at(3) === board().empty){
                         
                         symbol2(4)
+                        linkDataSymbol(input.start)
                         if(input.start.at(0) === input.player2.symbol
                         && input.start.at(3) === input.player2.symbol
                         && input.start.at(6) === input.player2.symbol
@@ -994,6 +1079,7 @@ function inputPlayer(event){
                     }else if(input.start.at(4) === board().empty){
                         
                         symbol2(5)
+                        linkDataSymbol(input.start)
                         if(input.start.at(0) === input.player2.symbol
                         && input.start.at(4) === input.player2.symbol
                         && input.start.at(8) === input.player2.symbol
@@ -1020,6 +1106,7 @@ function inputPlayer(event){
                     }else if(input.start.at(5) === board().empty){
                         
                         symbol2(6)
+                        linkDataSymbol(input.start)
                         if(input.start.at(3) === input.player2.symbol
                         && input.start.at(4) === input.player2.symbol
                         && input.start.at(5) === input.player2.symbol
@@ -1038,6 +1125,7 @@ function inputPlayer(event){
                     }else if(input.start.at(6) === board().empty){
                         
                         symbol2(7)
+                        linkDataSymbol(input.start)
                         if(input.start.at(0) === input.player2.symbol
                         && input.start.at(3) === input.player2.symbol
                         && input.start.at(6) === input.player2.symbol
@@ -1060,6 +1148,7 @@ function inputPlayer(event){
                     }else if(input.start.at(7) === board().empty){
                         
                         symbol2(8)
+                        linkDataSymbol(input.start)
                         if(input.start.at(1) === input.player2.symbol
                         && input.start.at(4) === input.player2.symbol
                         && input.start.at(7) === input.player2.symbol
@@ -1078,6 +1167,7 @@ function inputPlayer(event){
                     }else if(input.start.at(8) === board().empty){
                         
                         symbol2(9)
+                        linkDataSymbol(input.start)
                         if(input.start.at(2) === input.player2.symbol
                         && input.start.at(5) === input.player2.symbol
                         && input.start.at(8) === input.player2.symbol
