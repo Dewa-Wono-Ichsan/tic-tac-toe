@@ -63,6 +63,7 @@ const input = (function(){
 
 const playerInput = (function(){
      const container = document.querySelector('.container')
+     const gameStatus = document.querySelector('.game-status')
      const start = document.querySelector('.start')
      const restart = document.querySelector('.restart')
      const boardGame = document.querySelector('.container-board')
@@ -78,6 +79,7 @@ const playerInput = (function(){
      
      return{
         container,
+        gameStatus,
         start,
         restart,
         boardGame,
@@ -113,6 +115,7 @@ function display(){
     btn.addEventListener('click',function(){
         input.start = board().field
         linkDataSymbol(input.start)
+        playerInput.gameStatus.textContent = 'Game Start!'
     })
 
     return btn
@@ -131,6 +134,7 @@ function start(){
         playerInput.boardGame.addEventListener('click', inputPlayer)
         playerInput.start.remove()
         display()
+        playerInput.gameStatus.textContent = 'Game Start!'
     }
 
     return startInt()
@@ -289,7 +293,7 @@ function inputPlayer(event){
                         || input.start.at(0) === input.player2.symbol
                         && input.start.at(3) === input.player2.symbol
                         && input.start.at(6) === input.player2.symbol){
-                            console.warn(`${input.player2.name} win!`)
+                            playerInput.gameStatus.textContent = `${input.player2.name} win!`
                         }
                     }
                     break;
@@ -308,7 +312,7 @@ function inputPlayer(event){
                         || input.start.at(0) === input.player2.symbol
                         && input.start.at(1) === input.player2.symbol
                         && input.start.at(2) === input.player2.symbol){
-                            console.warn(`${input.player2.name} win!`)
+                            playerInput.gameStatus.textContent = `${input.player2.name} win!`
                         }
                     }
                     break;
@@ -331,7 +335,7 @@ function inputPlayer(event){
                         || input.start.at(2) === input.player2.symbol
                         && input.start.at(5) === input.player2.symbol
                         && input.start.at(8) === input.player2.symbol){
-                            console.warn(`${input.player2.name} win!`)
+                            playerInput.gameStatus.textContent = `${input.player2.name} win!`
                         }
                     }
                     break;
@@ -350,7 +354,7 @@ function inputPlayer(event){
                         || input.start.at(3) === input.player2.symbol
                         && input.start.at(4) === input.player2.symbol
                         && input.start.at(5) === input.player2.symbol){
-                            console.warn(`${input.player2.name} win!`)
+                            playerInput.gameStatus.textContent = `${input.player2.name} win!`
                         }
                     }
                     break;
@@ -377,7 +381,7 @@ function inputPlayer(event){
                         || input.start.at(3) === input.player2.symbol
                         && input.start.at(4) === input.player2.symbol
                         && input.start.at(5) === input.player2.symbol){
-                            console.warn(`${input.player2.name} win!`)
+                            playerInput.gameStatus.textContent = `${input.player2.name} win!`
                         }
                     }
                     break;
@@ -396,7 +400,7 @@ function inputPlayer(event){
                         || input.start.at(2) === input.player2.symbol
                         && input.start.at(5) === input.player2.symbol
                         && input.start.at(8) === input.player2.symbol){
-                            console.warn(`${input.player2.name} win!`)
+                            playerInput.gameStatus.textContent = `${input.player2.name} win!`
                         }
                     }
                     break;
@@ -419,7 +423,7 @@ function inputPlayer(event){
                         || input.start.at(6) === input.player2.symbol
                         && input.start.at(7) === input.player2.symbol
                         && input.start.at(8) === input.player2.symbol){
-                            console.warn(`${input.player2.name} win!`)
+                            playerInput.gameStatus.textContent = `${input.player2.name} win!`
                         }
                     }
                     break;
@@ -438,7 +442,7 @@ function inputPlayer(event){
                         || input.start.at(6) === input.player2.symbol
                         && input.start.at(7) === input.player2.symbol
                         && input.start.at(8) === input.player2.symbol){
-                            console.warn(`${input.player2.name} win!`)
+                            playerInput.gameStatus.textContent = `${input.player2.name} win!`
                         }
                     }
                     break;
@@ -461,7 +465,7 @@ function inputPlayer(event){
                         || input.start.at(6) === input.player2.symbol
                         && input.start.at(7) === input.player2.symbol
                         && input.start.at(8) === input.player2.symbol){
-                            console.warn(`${input.player2.name} win!`)
+                            playerInput.gameStatus.textContent = `${input.player2.name} win!`
                         }
                     }
                     break;
@@ -489,7 +493,7 @@ function inputPlayer(event){
                         || input.start.at(0) === input.player1.symbol
                         && input.start.at(3) === input.player1.symbol
                         && input.start.at(6) === input.player1.symbol){
-                            console.warn(`${input.player1.name} win!`);
+                            playerInput.gameStatus.textContent = `${input.player1.name} win!`
                         }
                     }
                     break;
@@ -508,7 +512,7 @@ function inputPlayer(event){
                         || input.start.at(0) === input.player1.symbol
                         && input.start.at(1) === input.player1.symbol
                         && input.start.at(2) === input.player1.symbol){
-                            console.warn(`${input.player1.name} win!`)
+                            playerInput.gameStatus.textContent = `${input.player1.name} win!`
                         }
                     }
                     break;
@@ -531,7 +535,7 @@ function inputPlayer(event){
                         || input.start.at(2) === input.player1.symbol
                         && input.start.at(5) === input.player1.symbol
                         && input.start.at(8) === input.player1.symbol){
-                            console.warn(`${input.player1.name} win!`)
+                            playerInput.gameStatus.textContent = `${input.player1.name} win!`
                         }
                     }
                     break;
@@ -550,7 +554,7 @@ function inputPlayer(event){
                         || input.start.at(3) === input.player1.symbol
                         && input.start.at(4) === input.player1.symbol
                         && input.start.at(5) === input.player1.symbol){
-                            console.warn(`${input.player1.name} win!`)
+                            playerInput.gameStatus.textContent = `${input.player1.name} win!`
                         }
                     }
                     break;
@@ -577,7 +581,7 @@ function inputPlayer(event){
                         || input.start.at(3) === input.player1.symbol
                         && input.start.at(4) === input.player1.symbol
                         && input.start.at(5) === input.player1.symbol){
-                            console.warn(`${input.player1.name} win!`)
+                            playerInput.gameStatus.textContent = `${input.player1.name} win!`
                         }
                     }
                     break;
@@ -596,7 +600,7 @@ function inputPlayer(event){
                         || input.start.at(2) === input.player1.symbol
                         && input.start.at(5) === input.player1.symbol
                         && input.start.at(8) === input.player1.symbol){
-                            console.warn(`${input.player1.name} win!`)
+                            playerInput.gameStatus.textContent = `${input.player1.name} win!`
                         }
                     }
                     break;
@@ -619,7 +623,7 @@ function inputPlayer(event){
                         || input.start.at(6) === input.player1.symbol
                         && input.start.at(7) === input.player1.symbol
                         && input.start.at(8) === input.player1.symbol){
-                            console.warn(`${input.player1.name} win!`)
+                            playerInput.gameStatus.textContent = `${input.player1.name} win!`
                         }
                     }
                     break;
@@ -638,7 +642,7 @@ function inputPlayer(event){
                         || input.start.at(6) === input.player1.symbol
                         && input.start.at(7) === input.player1.symbol
                         && input.start.at(8) === input.player1.symbol){
-                            console.warn(`${input.player1.name} win!`)
+                            playerInput.gameStatus.textContent = `${input.player1.name} win!`
                         }
                     }
                     break;
@@ -661,7 +665,7 @@ function inputPlayer(event){
                         || input.start.at(6) === input.player1.symbol
                         && input.start.at(7) === input.player1.symbol
                         && input.start.at(8) === input.player1.symbol){
-                            console.warn(`${input.player1.name} win!`)
+                            playerInput.gameStatus.textContent = `${input.player1.name} win!`
                         }
                     }
                     break;
@@ -806,7 +810,7 @@ function inputPlayer(event){
                         || input.start.at(0) === input.player1.symbol
                         && input.start.at(3) === input.player1.symbol
                         && input.start.at(6) === input.player1.symbol){
-                            console.warn(`${input.player1.name} win!`);
+                            playerInput.gameStatus.textContent = `${input.player1.name} win!`
                         }
                     }
                     break;
@@ -825,7 +829,7 @@ function inputPlayer(event){
                         || input.start.at(0) === input.player1.symbol
                         && input.start.at(1) === input.player1.symbol
                         && input.start.at(2) === input.player1.symbol){
-                            console.warn(`${input.player1.name} win!`)
+                            playerInput.gameStatus.textContent = `${input.player1.name} win!`
                         }
                     }
                     break;
@@ -848,7 +852,7 @@ function inputPlayer(event){
                         || input.start.at(2) === input.player1.symbol
                         && input.start.at(5) === input.player1.symbol
                         && input.start.at(8) === input.player1.symbol){
-                            console.warn(`${input.player1.name} win!`)
+                            playerInput.gameStatus.textContent = `${input.player1.name} win!`
                         }
                     }
                     break;
@@ -867,7 +871,7 @@ function inputPlayer(event){
                         || input.start.at(3) === input.player1.symbol
                         && input.start.at(4) === input.player1.symbol
                         && input.start.at(5) === input.player1.symbol){
-                            console.warn(`${input.player1.name} win!`)
+                            playerInput.gameStatus.textContent = `${input.player1.name} win!`
                         }
                     }
                     break;
@@ -894,7 +898,7 @@ function inputPlayer(event){
                         || input.start.at(3) === input.player1.symbol
                         && input.start.at(4) === input.player1.symbol
                         && input.start.at(5) === input.player1.symbol){
-                            console.warn(`${input.player1.name} win!`)
+                            playerInput.gameStatus.textContent = `${input.player1.name} win!`
                         }
                     }
                     break;
@@ -913,7 +917,7 @@ function inputPlayer(event){
                         || input.start.at(2) === input.player1.symbol
                         && input.start.at(5) === input.player1.symbol
                         && input.start.at(8) === input.player1.symbol){
-                            console.warn(`${input.player1.name} win!`)
+                            playerInput.gameStatus.textContent = `${input.player1.name} win!`
                         }
                     }
                     break;
@@ -936,7 +940,7 @@ function inputPlayer(event){
                         || input.start.at(6) === input.player1.symbol
                         && input.start.at(7) === input.player1.symbol
                         && input.start.at(8) === input.player1.symbol){
-                            console.warn(`${input.player1.name} win!`)
+                            playerInput.gameStatus.textContent = `${input.player1.name} win!`
                         }
                     }
                     break;
@@ -955,7 +959,7 @@ function inputPlayer(event){
                         || input.start.at(6) === input.player1.symbol
                         && input.start.at(7) === input.player1.symbol
                         && input.start.at(8) === input.player1.symbol){
-                            console.warn(`${input.player1.name} win!`)
+                            playerInput.gameStatus.textContent = `${input.player1.name} win!`
                         }
                     }
                     break;
@@ -978,7 +982,7 @@ function inputPlayer(event){
                         || input.start.at(6) === input.player1.symbol
                         && input.start.at(7) === input.player1.symbol
                         && input.start.at(8) === input.player1.symbol){
-                            console.warn(`${input.player1.name} win!`)
+                            playerInput.gameStatus.textContent = `${input.player1.name} win!`
                         }
                     }
                     break;
@@ -1007,7 +1011,7 @@ function inputPlayer(event){
                         || input.start.at(0) === input.player2.symbol
                         && input.start.at(3) === input.player2.symbol
                         && input.start.at(6) === input.player2.symbol){
-                            console.warn(`${input.player2.name} win!`);
+                            playerInput.gameStatus.textContent = `${input.player2.name} win!`
                         }
                     }
                     break;
@@ -1026,7 +1030,7 @@ function inputPlayer(event){
                         || input.start.at(0) === input.player2.symbol
                         && input.start.at(1) === input.player2.symbol
                         && input.start.at(2) === input.player2.symbol){
-                            console.warn(`${input.player2.name} win!`)
+                            playerInput.gameStatus.textContent = `${input.player2.name} win!`
                         }
                     }
                     break;
@@ -1049,7 +1053,7 @@ function inputPlayer(event){
                         || input.start.at(2) === input.player2.symbol
                         && input.start.at(5) === input.player2.symbol
                         && input.start.at(8) === input.player2.symbol){
-                            console.warn(`${input.player2.name} win!`)
+                            playerInput.gameStatus.textContent = `${input.player2.name} win!`
                         }
                     }
                     break;
@@ -1068,7 +1072,7 @@ function inputPlayer(event){
                         || input.start.at(3) === input.player2.symbol
                         && input.start.at(4) === input.player2.symbol
                         && input.start.at(5) === input.player2.symbol){
-                            console.warn(`${input.player2.name} win!`)
+                            playerInput.gameStatus.textContent = `${input.player2.name} win!`
                         }
                     }
                     break;
@@ -1095,7 +1099,7 @@ function inputPlayer(event){
                         || input.start.at(3) === input.player2.symbol
                         && input.start.at(4) === input.player2.symbol
                         && input.start.at(5) === input.player2.symbol){
-                            console.warn(`${input.player2.name} win!`)
+                            playerInput.gameStatus.textContent = `${input.player2.name} win!`
                         }
                     }
                     break;
@@ -1114,7 +1118,7 @@ function inputPlayer(event){
                         || input.start.at(2) === input.player2.symbol
                         && input.start.at(5) === input.player2.symbol
                         && input.start.at(8) === input.player2.symbol){
-                            console.warn(`${input.player2.name} win!`)
+                            playerInput.gameStatus.textContent = `${input.player2.name} win!`
                         }
                     }
                     break;
@@ -1137,7 +1141,7 @@ function inputPlayer(event){
                         || input.start.at(6) === input.player2.symbol
                         && input.start.at(7) === input.player2.symbol
                         && input.start.at(8) === input.player2.symbol){
-                            console.warn(`${input.player2.name} win!`)
+                            playerInput.gameStatus.textContent = `${input.player2.name} win!`
                         }
                     }
                     break;
@@ -1156,7 +1160,7 @@ function inputPlayer(event){
                         || input.start.at(6) === input.player2.symbol
                         && input.start.at(7) === input.player2.symbol
                         && input.start.at(8) === input.player2.symbol){
-                            console.warn(`${input.player2.name} win!`)
+                            playerInput.gameStatus.textContent = `${input.player2.name} win!`
                         }
                     }
                     break;
@@ -1179,7 +1183,7 @@ function inputPlayer(event){
                         || input.start.at(6) === input.player2.symbol
                         && input.start.at(7) === input.player2.symbol
                         && input.start.at(8) === input.player2.symbol){
-                            console.warn(`${input.player2.name} win!`)
+                            playerInput.gameStatus.textContent = `${input.player2.name} win!`
                         }
                     }
                     break;
