@@ -79,6 +79,9 @@ const playerInput = (function(){
      const box7 = document.querySelector('#box-7')
      const box8 = document.querySelector('#box-8')
      const box9 = document.querySelector('#box-9')
+     const changeName = document.querySelector('.change-name')
+     const playerName1 = document.querySelector('#player1-name')
+     const playerName2 = document.querySelector('#player2-name')
      
      return{
         container,
@@ -98,6 +101,9 @@ const playerInput = (function(){
         box7,
         box8,
         box9,
+        changeName,
+        playerName1,
+        playerName2,
      }
 })()
 
@@ -151,6 +157,32 @@ function start(){
 }
 
 start()
+
+playerInput.changeName.addEventListener('click',function(){
+    if( playerInput.playerName1.value === ''
+        && playerInput.playerName2.value === ''
+    ){
+
+    }
+    else if(   playerInput.playerName1.value === ''
+                && playerInput.playerName2.value !== ''
+    ){
+            input.player2.name = playerInput.playerName2.value
+    }
+    else if(   playerInput.playerName1.value !== ''
+                && playerInput.playerName2.value === ''
+    ){
+            input.player1.name = playerInput.playerName1.value
+    }
+    else{
+            input.player1.name = playerInput.playerName1.value
+            input.player2.name = playerInput.playerName2.value
+    }
+    playerInput.player1Status.textContent = `player1 has name ${input.player1.name} and symbol ${input.player1.symbol}`
+    playerInput.player2Status.textContent = `player2 has name ${input.player2.name} and symbol ${input.player2.symbol}`
+    playerInput.playerName1.value = ''
+    playerInput.playerName2.value = ''
+})
 
 function inputPlayer(event){
 
