@@ -66,6 +66,7 @@ const playerInput = (function(){
      const gameStatus = document.querySelector('.game-status')
      const player1Status = document.querySelector('.player1-status')
      const player2Status = document.querySelector('.player2-status')
+     const turn = document.querySelector('.game-turn')
      const start = document.querySelector('.start')
      const restart = document.querySelector('.restart')
      const boardGame = document.querySelector('.container-board')
@@ -84,6 +85,7 @@ const playerInput = (function(){
         gameStatus,
         player1Status,
         player2Status,
+        turn,
         start,
         restart,
         boardGame,
@@ -141,6 +143,7 @@ function start(){
         playerInput.gameStatus.textContent = 'Game Start!'
         playerInput.player1Status.textContent = `player1 has name ${input.player1.name} and symbol ${input.player1.symbol}`
         playerInput.player2Status.textContent = `player2 has name ${input.player2.name} and symbol ${input.player2.symbol}`
+        playerInput.turn.textContent = `First turn for ${input.turn}!`
     }
 
     return startInt()
