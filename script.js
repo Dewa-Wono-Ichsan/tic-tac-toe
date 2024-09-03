@@ -536,6 +536,9 @@ function inputPlayer(event){
                         && input.start.at(6) === input.player1.symbol){
                             playerInput.gameStatus.textContent = `${input.player1.name} win!`
                         }
+                        else if(scan1 === 4 && scan2 === 4){
+                            playerInput.gameStatus.textContent = 'Draw!'
+                        }
                     }
                     break;
                 case 'box-2':
@@ -554,6 +557,9 @@ function inputPlayer(event){
                         && input.start.at(1) === input.player1.symbol
                         && input.start.at(2) === input.player1.symbol){
                             playerInput.gameStatus.textContent = `${input.player1.name} win!`
+                        }
+                        else if(scan1 === 4 && scan2 === 4){
+                            playerInput.gameStatus.textContent = 'Draw!'
                         }
                     }
                     break;
@@ -578,6 +584,9 @@ function inputPlayer(event){
                         && input.start.at(8) === input.player1.symbol){
                             playerInput.gameStatus.textContent = `${input.player1.name} win!`
                         }
+                        else if(scan1 === 4 && scan2 === 4){
+                            playerInput.gameStatus.textContent = 'Draw!'
+                        }
                     }
                     break;
                 case 'box-4':
@@ -597,6 +606,9 @@ function inputPlayer(event){
                         && input.start.at(5) === input.player1.symbol){
                             playerInput.gameStatus.textContent = `${input.player1.name} win!`
                         }
+                    }
+                    else if(scan1 === 4 && scan2 === 4){
+                        playerInput.gameStatus.textContent = 'Draw!'
                     }
                     break;
                 case 'box-5':
@@ -624,6 +636,9 @@ function inputPlayer(event){
                         && input.start.at(5) === input.player1.symbol){
                             playerInput.gameStatus.textContent = `${input.player1.name} win!`
                         }
+                        else if(scan1 === 4 && scan2 === 4){
+                            playerInput.gameStatus.textContent = 'Draw!'
+                        }
                     }
                     break;
                 case 'box-6':
@@ -642,6 +657,9 @@ function inputPlayer(event){
                         && input.start.at(5) === input.player1.symbol
                         && input.start.at(8) === input.player1.symbol){
                             playerInput.gameStatus.textContent = `${input.player1.name} win!`
+                        }
+                        else if(scan1 === 4 && scan2 === 4){
+                            playerInput.gameStatus.textContent = 'Draw!'
                         }
                     }
                     break;
@@ -666,6 +684,9 @@ function inputPlayer(event){
                         && input.start.at(8) === input.player1.symbol){
                             playerInput.gameStatus.textContent = `${input.player1.name} win!`
                         }
+                        else if(scan1 === 4 && scan2 === 4){
+                            playerInput.gameStatus.textContent = 'Draw!'
+                        }
                     }
                     break;
                 case 'box-8':
@@ -684,6 +705,9 @@ function inputPlayer(event){
                         && input.start.at(7) === input.player1.symbol
                         && input.start.at(8) === input.player1.symbol){
                             playerInput.gameStatus.textContent = `${input.player1.name} win!`
+                        }
+                        else if(scan1 === 4 && scan2 === 4){
+                            playerInput.gameStatus.textContent = 'Draw!'
                         }
                     }
                     break;
@@ -707,6 +731,9 @@ function inputPlayer(event){
                         && input.start.at(7) === input.player1.symbol
                         && input.start.at(8) === input.player1.symbol){
                             playerInput.gameStatus.textContent = `${input.player1.name} win!`
+                        }
+                        else if(scan1 === 4 && scan2 === 4){
+                            playerInput.gameStatus.textContent = 'Draw!'
                         }
                     }
                     break;
@@ -1054,6 +1081,9 @@ function inputPlayer(event){
                         && input.start.at(6) === input.player2.symbol){
                             playerInput.gameStatus.textContent = `${input.player2.name} win!`
                         }
+                        else if(scan1 === 4 && scan2 === 4){
+                            playerInput.gameStatus.textContent = 'Draw!'
+                        }
                     }
                     break;
                 case 'box-2':
@@ -1072,6 +1102,9 @@ function inputPlayer(event){
                         && input.start.at(1) === input.player2.symbol
                         && input.start.at(2) === input.player2.symbol){
                             playerInput.gameStatus.textContent = `${input.player2.name} win!`
+                        }
+                        else if(scan1 === 4 && scan2 === 4){
+                            playerInput.gameStatus.textContent = 'Draw!'
                         }
                     }
                     break;
@@ -1096,6 +1129,9 @@ function inputPlayer(event){
                         && input.start.at(8) === input.player2.symbol){
                             playerInput.gameStatus.textContent = `${input.player2.name} win!`
                         }
+                        else if(scan1 === 4 && scan2 === 4){
+                            playerInput.gameStatus.textContent = 'Draw!'
+                        }
                     }
                     break;
                 case 'box-4':
@@ -1114,6 +1150,9 @@ function inputPlayer(event){
                         && input.start.at(4) === input.player2.symbol
                         && input.start.at(5) === input.player2.symbol){
                             playerInput.gameStatus.textContent = `${input.player2.name} win!`
+                        }
+                        else if(scan1 === 4 && scan2 === 4){
+                            playerInput.gameStatus.textContent = 'Draw!'
                         }
                     }
                     break;
@@ -1142,6 +1181,9 @@ function inputPlayer(event){
                         && input.start.at(5) === input.player2.symbol){
                             playerInput.gameStatus.textContent = `${input.player2.name} win!`
                         }
+                        else if(scan1 === 4 && scan2 === 4){
+                            playerInput.gameStatus.textContent = 'Draw!'
+                        }
                     }
                     break;
                 case 'box-6':
@@ -1160,6 +1202,9 @@ function inputPlayer(event){
                         && input.start.at(5) === input.player2.symbol
                         && input.start.at(8) === input.player2.symbol){
                             playerInput.gameStatus.textContent = `${input.player2.name} win!`
+                        }
+                        else if(scan1 === 4 && scan2 === 4){
+                            playerInput.gameStatus.textContent = 'Draw!'
                         }
                     }
                     break;
@@ -1184,6 +1229,9 @@ function inputPlayer(event){
                         && input.start.at(8) === input.player2.symbol){
                             playerInput.gameStatus.textContent = `${input.player2.name} win!`
                         }
+                        else if(scan1 === 4 && scan2 === 4){
+                            playerInput.gameStatus.textContent = 'Draw!'
+                        }
                     }
                     break;
                 case 'box-8':
@@ -1202,6 +1250,9 @@ function inputPlayer(event){
                         && input.start.at(7) === input.player2.symbol
                         && input.start.at(8) === input.player2.symbol){
                             playerInput.gameStatus.textContent = `${input.player2.name} win!`
+                        }
+                        else if(scan1 === 4 && scan2 === 4){
+                            playerInput.gameStatus.textContent = 'Draw!'
                         }
                     }
                     break;
@@ -1225,6 +1276,9 @@ function inputPlayer(event){
                         && input.start.at(7) === input.player2.symbol
                         && input.start.at(8) === input.player2.symbol){
                             playerInput.gameStatus.textContent = `${input.player2.name} win!`
+                        }
+                        else if(scan1 === 4 && scan2 === 4){
+                            playerInput.gameStatus.textContent = 'Draw!'
                         }
                     }
                     break;
