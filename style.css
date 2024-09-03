@@ -9,4 +9,8 @@
 
 .container-symbol{
     border: 1px solid black;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
